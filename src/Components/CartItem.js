@@ -28,7 +28,7 @@ const CartItem = (props) => {
   const removeProductHandler = (event) => {
     const idRemove = event.target.closest(".cartRow").id;
     dispatch(cartActions.DELETE_CART({ id: idRemove, email: emailCurUser }));
-    //Update total price
+    //Update total price for product
     dispatch(cartActions.UPDATE_TOTALPRICE(emailCurUser));
     //Update local storage
     localStorage.setItem(
